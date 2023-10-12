@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Print the reversed number</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container main_container">
+      <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="reverse-number.html" class="nav-link">Reverse</a>
+          </li>
+          <li class="nav-item">
+            <a href="alphabetical-order.html" class="nav-link">Sort Order</a>
+          </li>
+          <li class="nav-item">
+            <a href="math.html" class="nav-link active">Math</a>
+          </li>
+          <li class="nav-item">
+            <a href="text.html" class="nav-link">Text</a>
+          </li>
+        </ul>
+      </header>
+      <main>
+        <div class="container calculation">
+          <div class="row">
+            <div class="col">
+              <div class="form specform">
+                <p>
+                  <b>
+                    Find the area of a triangle with lengths of the three of its
+                    sides</b
+                  >
+                </p>
+                <img
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvt-s3-files.s3.amazonaws.com%2Fuploads%2Fproblem_question_image%2Fimage%2F1097%2FRightTriangle.jpg&f=1&nofb=1&ipt=eae300056abb47d85debea1aa2b91bc7c5084a22f363e848aec462797eda9d92&ipo=images"
+                  width="50%"
+                  alt=""
+                  style="margin-top: 15px; display: block; margin-bottom: 15px"
+                />
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="input_num"
+                    placeholder="Enter a side"
+                  />
+                  <input
+                    type="text"
+                    id="input_num2"
+                    placeholder="Enter b side"
+                  />
+                  <input
+                    style="
+                      margin-top: 5px;
+                      display: block;
+                      margin-left: auto;
+                      margin-right: auto;
+                    "
+                    type="text"
+                    id="input_num3"
+                    placeholder="Enter c side"
+                  /><br />
+                  <b><label id="label_num" for="num"></label></b><br />
+                  <small id="helpId" class="form-text text-muted"
+                    >Press submit to calculate</small
+                  ><br />
+                  <button
+                    onclick="reverseAndPrint()"
+                    type="button"
+                    class="btn btn-primary"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container calculation">
+          <div class="form specform">
+            <p>
+              <b> Calculate multiplication and division of two numbers</b>
+            </p>
+            <img
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.w3resource.com%2Fw3r_images%2Fjavascript-basic-image-exercise-10.png&f=1&nofb=1&ipt=e6f78996217b36b55735a5329dd366313bd3e110a1fcc9aa1807ec9bb80bdcdc&ipo=images"
+              width="50%"
+              alt=""
+              style="margin-top: 15px; display: block; margin-bottom: 15px"
+            />
+            <div class="form-group">
+              <input type="text" id="numA" placeholder="Enter number a" />
+              <input type="text" id="numB" placeholder="Enter number b" /><br />
+              <b><label id="rez" for="num"></label></b><br />
+              <small id="helpId" class="form-text text-muted"
+                >Press submit to calculate</small
+              ><br />
+              <button
+                onclick="multiplyAndPrint()"
+                type="button"
+                class="btn btn-primary"
+              >
+                Muliply
+              </button>
+              <button
+                onclick="divideAndPrint()"
+                type="button"
+                class="btn btn-primary"
+              >
+                Divide
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container calculation">
+          <div class="form specform">
+            <p>
+              <b>Calculate factorial of a number </b>
+            </p>
+            <img
+              src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/program-for-factorial-of-a-number-1024x512.png"
+              width="80%"
+              alt=""
+              style="margin-top: 15px; display: block; margin-bottom: 15px"
+            />
+            <div class="form-group">
+              <input
+                type="text"
+                id="factNum"
+                placeholder="Enter a number"
+              /><br />
+              <b><label id="factRez" for="num"></label></b><br />
+              <small id="helpId" class="form-text text-muted"
+                >Press submit to calculate</small
+              ><br />
+              <button
+                onclick="findAndPrint()"
+                type="button"
+                class="btn btn-primary"
+              >
+                Calculate
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

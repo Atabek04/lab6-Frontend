@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url("/img/math.jpg") repeat;
+}
+
+.main_container {
+  background: rgba(243, 241, 241, 0.884);
+  padding-bottom: 15%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 3%;
+}
+
+.nav-item {
+  background-color: aliceblue;
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.meme img {
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.meme h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.content {
+  padding-top: 50px;
+  padding-left: 30px;
+}
+
+.list-group {
+  margin-top: 20px;
+}
+
+.list-group .mb-1 {
+  margin-top: 5px;
+}
+
+.description {
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.num-input {
+  width: 300px !important;
+}
+
+.submit-btn {
+  width: 120px;
+  height: 38px;
+  margin: 0 auto;
+}
+
+.calculation {
+  background-color: rgba(255, 255, 255, 0.678);
+  padding: 30px;
+  width: 500px !important;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.calculation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.code-part {
+  background-color: rgb(222, 238, 234);
+  width: 600px !important;
+  padding: 20px;
+}

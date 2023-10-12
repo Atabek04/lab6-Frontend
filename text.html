@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Print the reversed number</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container main_container">
+      <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="reverse-number.html" class="nav-link">Reverse</a>
+          </li>
+          <li class="nav-item">
+            <a href="alphabetical-order.html" class="nav-link">Sort Order</a>
+          </li>
+          <li class="nav-item">
+            <a href="math.html" class="nav-link">Math</a>
+          </li>
+          <li class="nav-item">
+            <a href="text.html" class="nav-link active">Text</a>
+          </li>
+        </ul>
+      </header>
+      <main>
+        <div class="container calculation">
+          <div class="row">
+            <div class="col">
+              <div class="form specform">
+                <p>
+                  <b>Swap two variables</b>
+                </p>
+                <img
+                  src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.geeksforgeeks.org%2Fwp-content%2Fuploads%2FCommonArticleDesign16.png&f=1&nofb=1&ipt=18924255f38b0d7303e2c79305713f087881fc954362340c18f9840e6e717e62&ipo=images"
+                  width="80%"
+                  alt=""
+                  style="margin-top: 15px; display: block; margin-bottom: 15px"
+                />
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="first_number"
+                    placeholder="Enter number a"
+                  />
+                  <input
+                    type="text"
+                    id="second_number"
+                    placeholder="Enter number b"
+                  /><br />
+                  <b><label id="label_rez" for="num"></label></b><br />
+                  <small id="helpId" class="form-text text-muted"
+                    >Press submit to swap vars</small
+                  ><br />
+                  <button
+                    onclick="swapNum()"
+                    type="button"
+                    class="btn btn-primary"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container calculation">
+          <div class="form specform">
+            <p>
+              <b>Convert the first letter of a string into UpperCase</b>
+            </p>
+            <img
+              src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.skillsugar.com%2Fmedia%2Fimage%2Fuppercase-first-javascript-1594904097.png&f=1&nofb=1&ipt=4b8916ea2646263d0ecf5a2c53494f2841cd10bc8c6226d689d7f991f9af26b7&ipo=images"
+              width="80%"
+              alt=""
+              style="margin-top: 15px; display: block; margin-bottom: 15px"
+            />
+            <div class="form-group">
+              <input
+                type="text"
+                id="conStr"
+                placeholder="Enter your string"
+              /><br />
+              <b><label id="conRez" for="num"></label></b><br />
+              <small id="helpId" class="form-text text-muted"
+                >Press submit to convert</small
+              ><br />
+              <button
+                onclick="convertToCapital()"
+                type="button"
+                class="btn btn-primary"
+              >
+                Convert
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="container calculation">
+          <div class="form specform">
+            <p>
+              <b>Count the letter in the string</b>
+            </p>
+            <div class="form-group">
+              <input type="text" id="cText" placeholder="Enter a string" />
+              <input
+                type="text"
+                id="cLetter"
+                placeholder="letter"
+                style="width: 100px !important"
+              /><br />
+              <b><label id="cRez" for="num"></label></b><br />
+              <small id="helpId" class="form-text text-muted"
+                >Press submit to count letters</small
+              ><br />
+              <button
+                onclick="countAndPrint()"
+                type="button"
+                class="btn btn-primary"
+              >
+                Count
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
