@@ -81,3 +81,7 @@ body {
   width: 600px !important;
   padding: 20px;
 }
+
+.inputForm {
+  margin: 3px;
+}

@@ -126,3 +126,142 @@ function countAndPrint() {
   var labelElement = document.getElementById("cRez");
   labelElement.textContent = "The count of letters is: " + rezult;
 }
+
+function isInRange(start, end, num) {
+  if (start <= num && end >= num) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function findRangeAndPrint() {
+  var inputA = document.getElementById("range1");
+  var start = inputA.value;
+
+  var inputB = document.getElementById("range2");
+  var end = inputB.value;
+
+  var inputC = document.getElementById("rangeNum");
+  var num = inputC.value;
+
+  var rezult = isInRange(start, end, num);
+
+  var labelElement = document.getElementById("rangeRez");
+  if (rezult) {
+    labelElement.textContent = rezult + ": Tp;he number is in a range";
+  } else {
+    labelElement.textContent = rezult + ": The number isn't in a range";
+  }
+}
+
+function isLetterInString(start, end, string, letter) {
+  for (let i = start; i < end; i++) {
+    if (string[i] == letter) {
+      return true;
+      break;
+    }
+  }
+  return false;
+}
+
+function findLetterInString() {
+  var inputA = document.getElementById("startIndex");
+  var start = inputA.value;
+  start -= 1;
+
+  var inputB = document.getElementById("endIndex");
+  var end = inputB.value;
+  end -= 1;
+
+  var inputC = document.getElementById("inString");
+  var string = inputC.value;
+  string = string.toLowerCase();
+
+  var inputD = document.getElementById("inLetter");
+  var letter = inputD.value;
+  letter = letter.toLowerCase();
+
+  var rezult = isLetterInString(start, end, string, letter);
+
+  var labelElement = document.getElementById("inRez");
+  if (rezult) {
+    labelElement.textContent = rezult + ": The letter is in a string";
+  } else {
+    labelElement.textContent = rezult + ": The letter isn't in a string";
+  }
+}
+
+function findBiigestNum(arr) {
+  let largestNum = arr.reduce(function (accumulatedValue, currentValue) {
+    return Math.max(accumulatedValue, currentValue);
+  });
+
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = largestNum;
+  }
+
+  return arr;
+}
+
+function findBiggest() {
+  var inputA = document.getElementById("numArray");
+  var array = inputA.value;
+  array = array.split(" ");
+
+  rez = findBiigestNum(array);
+
+  var labelElement = document.getElementById("arrayRez");
+  labelElement.textContent = rez;
+}
+
+function replaceWithNextCharacter(inputString) {
+  // Define the alphabet
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+  // Convert the input string to lowercase for simplicity
+  inputString = inputString.toLowerCase();
+
+  // Replace each character with the next one in the alphabet
+  const result = inputString.replace(/[a-z]/g, function (char) {
+    const currentIndex = alphabet.indexOf(char);
+    const nextIndex = (currentIndex + 1) % 26; // Wrap around if it's 'z'
+    return alphabet[nextIndex];
+  });
+
+  return result;
+}
+
+function replaceString() {
+  var inputA = document.getElementById("strReplace");
+  var string = inputA.value;
+
+  rez = replaceWithNextCharacter(string);
+
+  var labelElement = document.getElementById("replacedString");
+  labelElement.textContent = rez;
+}
+
+function sort_by_string_length(arra) {
+  for (var i = 0; i < arra.length; i++) {
+    for (var j = i + 1; j < arra.length; j++) {
+      if (arra[i].length > arra[j].length) {
+        var m = arra[i];
+        arra[i] = arra[j];
+        arra[j] = m;
+      }
+    }
+  }
+  return arra;
+}
+
+function sortByLengthAndPrint() {
+  var input = document.getElementById("strSort");
+  var a = input.value;
+  array = a.split(" ");
+
+  rez = sort_by_string_length(string);
+
+  var labelElement = document.getElementById("sortedString");
+  labelElement.textContent = rez;
+}
